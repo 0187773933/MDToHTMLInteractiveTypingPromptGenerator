@@ -58,7 +58,7 @@ if __name__ == "__main__":
 
 	# 2.) Generate Interactive HTML File
 	generated_html = html_generator.generate({
-		"title": "Test Interactive MD" ,
+		"title": input_md_fp.stem ,
 		"input": input_html ,
 	})
 	write_text( str( output_html_fp ) , generated_html )
