@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Test</title>
+	<!-- https://www.srihash.org/ -->
+<!-- 	<link rel="stylesheet" href="https://39363.org/CDN/jquery-ui.css" integrity="sha256-RPilbUJ5F7X6DdeTO6VFZ5vl5rO5MJnmSk4pwhWfV8A=" >
+	<script src="https://39363.org/CDN/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="></script>
+	<link rel="stylesheet" href="https://39363.org/CDN/bootstrap.min.css" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We">
+	<script src="https://39363.org/CDN/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"></script>
+	<script src="https://39363.org/CDN/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" ></script>
+	<link rel="stylesheet" href="https://39363.org/CDN/katex/katex.min.css" integrity="sha256-M6KFoDq9eUpmogkDgw6+3R3ZgUPSuFXnQyr8tskSfQs=">
+	<script src="https://39363.org/CDN/katex/katex.min.js" integrity="sha256-FyuFDgL3AT2Wi7dlv82fSVvxe2rPx1rRSVtMOWeRp6k="></script>
+	<script src="https://39363.org/CDN/katex/mhchem.min.js" integrity="sha256-rdVHJ96CTjgtCSJGnAZzhrvBOklMB9jN1B6oyg5J8uU="></script>
+	<script src="https://39363.org/CDN/katex/auto-render.min.js" integrity="sha256-G53bYZLObbTLTA3j70xRGPKxKYlBbzvDZ789B6sSFkE="></script> -->
+	<link rel="stylesheet" href="https://39363.org/CDN/jquery-ui.css">
+	<script src="https://39363.org/CDN/jquery-3.6.0.min.js"> </script>
+	<link rel="stylesheet" href="https://39363.org/CDN/bootstrap.min.css">
+	<script src="https://39363.org/CDN/bootstrap.bundle.min.js"></script>
+	<script src="https://39363.org/CDN/jquery-ui.min.js"></script>
+	<link rel="stylesheet" href="https://39363.org/CDN/katex/katex.min.css">
+	<script src="https://39363.org/CDN/katex/katex.min.js"></script>
+	<script src="https://39363.org/CDN/katex/mhchem.min.js"></script>
+	<script src="https://39363.org/CDN/katex/auto-render.min.js"></script>
+	<style type="text/css">
+		body {
+			/*background-color: #2E3033;*/
+			background-color: #363B40;
+			color: #b8bfc6;
+		}
+		.next-button {
+			text-decoration: none;
+			display: inline-block;
+			padding: 8px 16px;
+			border-radius: 50%;
+			background-color: #b7b7b7;
+			color: white;
+		}
+		.previous-button {
+			text-decoration: none;
+			display: inline-block;
+			padding: 8px 16px;
+			border-radius: 50%;
+			background-color: #b7b7b7;
+			color: white;
+		}
+		.our-no-gutter {
+			margin-left: 0;
+			margin-right: 0;
+			padding-left: 0;
+			padding-right: 0;
+		}
+		.slimmed-padding {
+			margin-left: 0 !important;
+			margin-right: 0 !important;
+			padding-left: 1 !important;
+			padding-right: 1 !important;
+		}
+		.correct {
+			border: 2px solid green;
+		}
+		.card {
+			width: 100% !important;
+		}
+	</style>
+</head>
+<body>
+	<br>
+	<div class="container">
+		<div class="row slimmed-padding">
+
+<h2>Introduction</h2>
+<ul>
+<li>
+<p>There are three major types of blood vessels : <span><input type="text" class="interactive-typing-prompt-input" style="width: 9ch;" name="arteries"> <span class="hint">&#63;</span></span></span> , <span><input type="text" class="interactive-typing-prompt-input" style="width: 12ch;" name="capillaries"> <span class="hint">&#63;</span></span></span> , and <span><input type="text" class="interactive-typing-prompt-input" style="width: 6ch;" name="veins"> <span class="hint">&#63;</span></span></span></p>
+</li>
+<li>
+<p><strong>Arteries</strong> :</p>
+<ul>
+<li>Arteries are vessels that carry blood away from the heart<ul>
+<li>"a" , "a" , <u>a</u>rtery <u>a</u>way</li>
+</ul>
+</li>
+<li>Arteries are under higher pressure than veins<ul>
+<li>Therefore , the walls of arteries are <span><input type="text" class="interactive-typing-prompt-input" style="width: 8ch;" name="thicker"> <span class="hint">&#63;</span></span></span></li>
+</ul>
+</li>
+<li>The smallest arteries are called <span><input type="text" class="interactive-typing-prompt-input" style="width: 11ch;" name="arterioles"> <span class="hint">&#63;</span></span></span> <ul>
+<li>They transport blood into capillaries</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Capillaries</strong> :<ul>
+<li>The smallest blood vessels are the site of substance exchange between the blood and body tissues.</li>
+<li>Grouped into <span><input type="text" class="interactive-typing-prompt-input" style="width: 19ch;" name="capillary networks"> <span class="hint">&#63;</span></span></span> ( capillary beds )<ul>
+<li>1 cell layer thick</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Veins</strong> :<ul>
+<li>Vessels that carry blood toward the heart</li>
+<li>Veins are under lower pressure than arteries<ul>
+<li>Therefore , the walls of veins are thinner</li>
+</ul>
+</li>
+<li>The smallest veins are called venules<ul>
+<li>They transport blood out of capillaries</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2>Structure and Function</h2>
+<ul>
+<li>
+<p>Arteries and veins are composed of three layers called tunics :</p>
+<ol>
+<li>
+<p><strong>Tunica Interna</strong> ( intima ) :</p>
+<ul>
+<li><span><input type="text" class="interactive-typing-prompt-input" style="width: 18ch;" name="Endothelial layer"> <span class="hint">&#63;</span></span></span> that lines the lumen of all blood vessels</li>
+<li>Simple squamous epithelium<ul>
+<li>1 cell layer thick</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Tunica Media</strong> :</p>
+<ul>
+<li>Smooth muscle and elastic fiber layer , regulated by sympathetic nervous system</li>
+<li>controls vasoconstriction / vasodilation of vessels</li>
+<li>thicker on artery than vein</li>
+</ul>
+</li>
+<li>
+<p>Tunica Externa ( adventitia ) :</p>
+<ul>
+<li><span><input type="text" class="interactive-typing-prompt-input" style="width: 18ch;" name="connective tissue"> <span class="hint">&#63;</span></span></span> that protects and reinforces vessels</li>
+<li>larger vessels contain "vasa vasorum" = "vessel of vessels"<ul>
+<li>nourish the external tissue of the blood vessel wall</li>
+</ul>
+</li>
+<li>thicker on vein than artery</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+<h3>Capillaries :</h3>
+<ul>
+<li>the smallest blood vessels<ul>
+<li>so small , they only allow <span><input type="text" class="interactive-typing-prompt-input" style="width: 14ch;" name="one red blood"> <span class="hint">&#63;</span></span></span> cell through at a time</li>
+</ul>
+</li>
+<li>they are responsible for the exchange of materials such as gases , nutrients , hormones , etc.</li>
+<li>There are three types of capillaries : <ol>
+<li><strong>Continuous Capillaires</strong> :<ul>
+<li>the most common</li>
+<li>abundant in the <span><input type="text" class="interactive-typing-prompt-input" style="width: 17ch;" name="skin and muscles"> <span class="hint">&#63;</span></span></span><ul>
+<li>and lungs</li>
+</ul>
+</li>
+<li>cells are connected by tight junctions<ul>
+<li>usually contain small gaps called intercellular clefts<ul>
+<li>allow passage of fluids and small solutes</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Fenestrated Capillaries</strong> :<ul>
+<li>contain <span><input type="text" class="interactive-typing-prompt-input" style="width: 23ch;" name="pores or fenestrations"> <span class="hint">&#63;</span></span></span><ul>
+<li>covered by a membrane or diaphragm , but are still more permeable than continuous capillaries</li>
+</ul>
+</li>
+<li>found where absorption or filtration takes places such as :<ul>
+<li>kidney = filtration</li>
+<li>intestines = absorbs nutrients</li>
+<li>endocrine glands = hormone entry into the blood</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Sinusoid Capillaries</strong> :<ul>
+<li>fewer tight junctions and larger intercellular clefts<ul>
+<li>allow for large molecules , even cells to pass through</li>
+</ul>
+</li>
+<li>only found in the <span><input type="text" class="interactive-typing-prompt-input" style="width: 47ch;" name="liver , bone marrow , spleen , adrenal medulla"> <span class="hint">&#63;</span></span></span></li>
+<li>RBC entering or exiting blood stream</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+<h3>Capillary Beds</h3>
+<ul>
+<li>a network of capillaries</li>
+<li>blood flows from <span><input type="text" class="interactive-typing-prompt-input" style="width: 20ch;" name="arteriole to venule"> <span class="hint">&#63;</span></span></span> through a capillary bed</li>
+<li>usually consist of two types of vessels<ol>
+<li><strong>Vascular Shunt</strong> :<ul>
+<li>directly connects the <span><input type="text" class="interactive-typing-prompt-input" style="width: 24ch;" name="arteriole to the venule"> <span class="hint">&#63;</span></span></span></li>
+<li>1 straight blood vessel</li>
+</ul>
+</li>
+<li><strong>True Capillaries</strong> :<ul>
+<li>branch off of the vascular shunt at the arteriole end and return to the vascular shunt of the venule end</li>
+<li>provide <span><input type="text" class="interactive-typing-prompt-input" style="width: 37ch;" name="exchange between the cells and blood"> <span class="hint">&#63;</span></span></span></li>
+<li>a ring of smooth muscle fibers surrounds the root of each true capillary at the arteriole end<ul>
+<li>this is called the <span><input type="text" class="interactive-typing-prompt-input" style="width: 23ch;" name="precapillary sphincter"> <span class="hint">&#63;</span></span></span></li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+<li>
+<p>Precapillary Sphincter :</p>
+<ul>
+<li>functions as a valve to regulate blood flow into the capillary</li>
+<li><span style='color:#FF9B42'>blood can either go through the true capillary or the shunt</span><ul>
+<li>If precapillary sphincters = relaxed : <span><input type="text" class="interactive-typing-prompt-input" style="width: 37ch;" name="blood flows through true capillaries"> <span class="hint">&#63;</span></span></span></li>
+<li>If precapillary sphincters = contracted : blood flows through the shunts and <span><input type="text" class="interactive-typing-prompt-input" style="width: 26ch;" name="bypasses the tissue cells"> <span class="hint">&#63;</span></span></span></li>
+</ul>
+</li>
+<li>regulated by the <span><input type="text" class="interactive-typing-prompt-input" style="width: 25ch;" name="autonomic nervous system"> <span class="hint">&#63;</span></span></span></li>
+<li>Why are sphincters important?<ul>
+<li>One example is body temperature regulation<ul>
+<li>As body temperature increases , sphincters in skin will relax , allowing more blood</li>
+</ul>
+</li>
+<li>After a large meal ( while relaxed ) blood will flow freely through true capillaries of GI organs to receive nutrients.</li>
+<li>"Food digestion"</li>
+<li>Exercise , sphincters close in capillary beds</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>In general , why is the artery's wall thicker than the vein's wall?</p>
+<ul>
+<li>Artery has higher blood pressure<ul>
+<li>thicker walls are needed to stay open and resist pressure</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Why would capillaries lack a tunica media and tunica adventitia?<ul>
+<li>Thin for gas and nutrient exchange</li>
+</ul>
+</li>
+</ul>
+		</div>
+	</div>
+	<script type="text/javascript">
+		function validate_typing_prompt_input( event ) {
+			if ( event.key === "Control" ) {
+				// console.log( "pressed the control key" );
+				$( event.currentTarget ).parent().replaceWith( `<span style="border: 2px solid green">${event.currentTarget.name}</span>` );
+				return;
+			}
+			if ( $( event.currentTarget ).val().trim() === event.currentTarget.name ) {
+				console.log( "correct" );
+				$( event.currentTarget ).parent().replaceWith( `<span style="border: 2px solid green">${event.currentTarget.name}</span>` );
+			}
+		}
+		function render_katex() {
+			renderMathInElement( document.body , {
+				strict: "ignore" ,
+				delimiters: [ // https://stackoverflow.com/a/45301641
+					{ left: "$$" , right: "$$" , display: true } ,
+					{ left: "\\[" , right: "\\]" , display: true } ,
+					{ left: "$" , right: "$" , display: false } ,
+					{ left: "\\(" , right: "\\)" , display: false }
+				]
+			});
+		}
+		function setup_hooks() {
+			// https://stackoverflow.com/a/70370483
+			// $( document ).on( "input" , ".interactive-typing-prompt-input" , ( e ) => {
+			$( document ).on( "keyup" , ".interactive-typing-prompt-input" , ( event ) => {
+				// $( e.currentTarget ).attr( "size" , ( e.currentTarget.value.length - ( e.currentTarget.value.length * .25 ) ) );
+				validate_typing_prompt_input( event );
+			});
+			$( document ).on( "click" , ".hint" , ( event ) => {
+				let target_name = $( event.currentTarget ).prev().attr( "name" );
+				$( event.currentTarget ).prev().val( target_name );
+				setTimeout( function() {
+					$( event.currentTarget ).prev().val( "" );
+				} , 1500 );
+				// $( event.currentTarget ).parent().replaceWith( `<span style="border: 2px solid green">${target_name}</span>` );
+			});
+		}
+		function init() {
+			$( document ).ready( function(){
+				$( ".interactive-typing-prompt-input" ).each( ( index , element ) => {
+					$( element ).val( "" );
+				});
+				render_katex();
+				setup_hooks();
+			});
+		}
+		document.addEventListener( "DOMContentLoaded" , init );
+	</script>
+</body>
+</html>
