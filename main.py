@@ -21,7 +21,7 @@ def replace_interactive_spans_with_input_fields( input_md_lines ):
 	for index , line in enumerate( input_md_lines ):
 
 		if span_matching_text in line:
-			print( f"{index} === {line}" )
+			# print( f"{index} === {line}" )
 			starts = [ [ match.start() , match.end() ] for match in re.finditer( span_matching_text , line ) ]
 			stops = [ line.find( "</span>" , x[ 1 ] ) for x in starts ]
 			rebuilt_line = ""
@@ -33,13 +33,12 @@ def replace_interactive_spans_with_input_fields( input_md_lines ):
 				# 2.) build input html for 'this' match
 				end_of_span_opening_index = ( line.find( '">' , match[ 1 ] ) + 2 )
 				existing_text = line[ end_of_span_opening_index : stops[ match_index ] ]
-				# built_input_html = f'<input type="text" class="interactive-typing-prompt-input" size="3" name="{existing_text}">'
 				built_input_html = f'<span><input type="text" class="interactive-typing-prompt-input" style="width: {len(existing_text)+1}ch;" name="{existing_text}"> <span class="hint">&#63;</span></span>'
 				rebuilt_line += built_input_html
 				# 3.) update intermediate index for next round
 				intermediate_index = stops[ match_index ]
 
-			# get any final text after the last match
+			# 4.) add any final text after the last match
 			rebuilt_line += line[ intermediate_index : ]
 			output_lines.append( rebuilt_line )
 		else:
@@ -56,14 +55,11 @@ if __name__ == "__main__":
 	# 1.) Conversion
 	input_md = replace_interactive_spans_with_input_fields( input_md )
 	input_html = markdown.markdown( "\n".join( input_md ) )
-	print( input_html )
 
 	# 2.) Generate Interactive HTML File
-	# html = html_generator.generate({
-	# 	"title": "Test Interactive MD"
-	# })
-	# write_text( str( output_html_fp ) , html )
-
-
-
-
+	generated_html = html_generator.generate({
+		"title": "Test Interactive MD" ,
+		"input": input_html ,
+	})
+	write_text( str( output_html_fp ) , generated_html )
+	print( f"Wrote HTML To : {output_html_fp}" )

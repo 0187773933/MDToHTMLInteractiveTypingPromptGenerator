@@ -4,7 +4,7 @@
 	- Abbreviation = "imd"
 	- Expand: "After typing delimiter ( discard delimiter )"
 	- `<span class="interactive-typing-prompt" style="border: 2px solid green">【clipboard】</span>【|】`
-2. Then Using typora , or whatever md editor , type document as normal
+2. Then Using [typora](https://typora.io/) , or whatever md editor , type document as normal
 3. `Ctrl+x` the text you want to be prompted to type
 4. Activate text expansion
 	- it replaces it with temporary green border around text
