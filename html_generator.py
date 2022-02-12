@@ -71,7 +71,7 @@ def generate( options ):
 				$( event.currentTarget ).parent().replaceWith( `<span style="border: 2px solid green">${{event.currentTarget.name}}</span>` );
 				return;
 			}}
-			if ( $( event.currentTarget ).val().trim().toLowerCase() === event.currentTarget.name ) {{
+			if ( $( event.currentTarget ).val().trim().toLowerCase() === event.currentTarget.name.toLowerCase() ) {{
 				console.log( "correct" );
 				$( event.currentTarget ).parent().replaceWith( `<span style="border: 2px solid green">${{event.currentTarget.name}}</span>` );
 			}}
