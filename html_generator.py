@@ -69,13 +69,13 @@ def generate( options ):
 			if ( event.key === "Control" ) {{
 				// console.log( "pressed the control key" );
 				// $( event.currentTarget ).parent().replaceWith( `<span style="border: 2px solid green">${{event.currentTarget.name}}</span>` );
-				$( event.currentTarget ).parent().replaceWith( `<span style="border-bottom: 2px solid green">${event.currentTarget.name}</span>` );
+				$( event.currentTarget ).parent().replaceWith( `<span style="border-bottom: 2px solid green">${{event.currentTarget.name}}</span>` );
 				return;
 			}}
 			if ( $( event.currentTarget ).val().trim().toLowerCase() === event.currentTarget.name.toLowerCase() ) {{
 				console.log( "correct" );
 				// $( event.currentTarget ).parent().replaceWith( `<span style="border: 2px solid green">${{event.currentTarget.name}}</span>` );
-				$( event.currentTarget ).parent().replaceWith( `<span style="border-bottom: 2px solid green">${event.currentTarget.name}</span>` );
+				$( event.currentTarget ).parent().replaceWith( `<span style="border-bottom: 2px solid green">${{event.currentTarget.name}}</span>` );
 			}}
 		}}
 		function render_katex() {{
