@@ -54,6 +54,13 @@ def generate( options ):
 		.correct {{
 			border: 2px solid green;
 		}}
+		#toggle-button {{
+			margin-top: 1px;
+			margin-right: 2px;
+			position:absolute;
+			top:0;
+			right:0;
+		}}
 	</style>
 </head>
 <body>
@@ -63,8 +70,29 @@ def generate( options ):
 			{options["input"]}
 		</div>
 	</div>
-
 	<script type="text/javascript">
+		function add_toggle_all_button() {{
+			window.toggle_button_state = false;
+			let toggle_on_off_button_html = `<button id="toggle-button" type="button"><span>Show All Labels</span></button>`;
+			document.body.insertAdjacentHTML( "afterend" , toggle_on_off_button_html );
+			document.getElementById( "toggle-button" ).addEventListener( "click" , function ( this_button ) {{
+				window.toggle_button_state = !window.toggle_button_state;
+				if ( window.toggle_button_state == true ) {{
+					// Auto Fill All Labels
+					$( ".interactive-typing-prompt-input" ).each( ( index , element ) => {{
+						let name = $( element ).attr( "name" );
+						$( element ).parent().replaceWith( `<span style="border-bottom: 2px solid green">${{name}}</span>` );
+					}});
+					$( "#toggle-button" ).text( "Hide All Labels" );
+					$( "#toggle-button" ).hide();
+				}} else {{
+					// Turn off All Labels
+					// dealing with this later , probably easiest to just cache the html of each element somewhere
+					// just refresh for now
+					// $( "#toggle-button" ).text( "Show All Labels" );
+				}}
+			}});
+		}}
 		function validate_typing_prompt_input( event ) {{
 			if ( event.key === "Control" ) {{
 				// console.log( "pressed the control key" );
@@ -108,6 +136,7 @@ def generate( options ):
 				}});
 				render_katex();
 				setup_hooks();
+				add_toggle_all_button();
 			}});
 		}}
 		document.addEventListener( "DOMContentLoaded" , init );
